@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import logo from './TakeShape.png'
 import styles from "../styles/banner.module.css";
 
-const ComingSoon = () => <span className={styles.comingSoon}>Coming soon</span>;
-
 const Banner = () => {
   const [visible, setVisible] = useState(true);
   return (
@@ -43,7 +41,7 @@ const Banner = () => {
               <a href='https://github.com/takeshape/takeshape-starter-shopify-gatsby'>Explore the repository in GitHub</a>
             </li>
             <li>
-              <ComingSoon /> Deploy this project to{" "}
+              Deploy this project to{" "}
               <a href='https://app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/takeshape-starter-shopify-gatsby/tree/trunk/.takeshape/pattern'>
                 TakeShape
               </a>{" "}
