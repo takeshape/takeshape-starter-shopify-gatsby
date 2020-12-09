@@ -33,11 +33,6 @@ const Banner = () => {
           <p>Interested in building something like this?</p>
           <ol>
             <li>
-              <a href='mailto:contact@takeshape.io?subject=Mesh%20Beta%20Request'>
-                Request early access to the TakeShape Mesh beta
-              </a>
-            </li>
-            <li>
               <a href='https://github.com/takeshape/takeshape-starter-shopify-gatsby'>Explore the repository in GitHub</a>
             </li>
             <li>

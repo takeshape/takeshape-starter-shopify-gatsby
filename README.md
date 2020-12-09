@@ -6,10 +6,9 @@ This project shows off how connecting [Shopify](https://shopify.com) with [TakeS
 
 To learn more and get started:
 
-1. [Apply to join the TakeShape Mesh beta](mailto:contact@takeshape.io)
-2. Explore the repo and copy it to your own GitHub account
-3. Deploy this project to TakeShape and Netlify
-4. Read our walkthrough to learn how we built this project from scratch
+1. Explore the repo and copy it to your own GitHub account
+2. Deploy this project to [TakeShape](https://app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/takeshape-starter-shopify-gatsby/tree/trunk/.takeshape/pattern) and [Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/takeshape/takeshape-starter-shopify-gatsby)
+3. [Read our walkthrough](https://www.takeshape.io/articles/building-a-rich-e-commerce-experience-on-the-jamstack-with-takeshape-shopify-and-gatsby-js/) to learn how we built this project from scratch
 
 ## Quickstart
 
@@ -37,7 +36,7 @@ or
    $ npm run setup
    ```
 
-3. In your new TakeShape project, connect to your Shopify account. (Note: You will need access to the TakeShape Mesh beta in order to connect services. [Contact us](mailto:contact@takeshape.io) to request access.)
+3. In your new TakeShape project, connect to your Shopify account.
 
    - Click on the project name in the upper left > Services > Connect Service.
    - Provide the URL of your Shopify store, then click save. You'll be taken through an OAuth flow to authorize the TakeShape app with your Shopify account.
