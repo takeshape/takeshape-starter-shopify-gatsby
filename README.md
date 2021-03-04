@@ -38,15 +38,14 @@ or
 
 3. In your new TakeShape project, connect to your Shopify account.
 
-   - Click on the project name in the upper left > Services > Connect Service.
+   - Click on the Schema tab in your project, then select "Connect Service".
    - Provide the URL of your Shopify store, then click save. You'll be taken through an OAuth flow to authorize the TakeShape app with your Shopify account.
 
 4. Create an API Key with `Dev` permissions in your TakeShape project.
 
-   - Click on the project name in the upper left > API Keys > New API Key. Save your
-     new API key somewhere.
+   - Click on the API tab in your project, then select API Keys in the sidebar nav. Select "New API Key". Save your new API key to a secure text file.
    - Copy and save the API endpoint provided on the API Keys page. It looks like this:
-     `https://api.takeshape.io/project/<your project ID>/graphql`
+     `https://api.takeshape.io/project/<your project ID>/v3/graphql`
 
 5. Back in your Next.js project, create a `.env` file in your project with following lines:
 
