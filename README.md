@@ -50,11 +50,11 @@ or
 5. Back in your Next.js project, create a `.env` file in your project with following lines:
 
    ```inputrc
-   TAKESHAPE_ENDPOINT=<takeshape-api-endpoint-you-copied>
+   TAKESHAPE_PROJECT=<takeshape-project-id>
    TAKESHAPE_TOKEN=<takeshape-api-key-you-copied>
    ```
 
-6. Finally, start your local development site at `http://localhost:3000`
+6. Finally, start your local development site at `http://localhost:8000`
 
    ```console
    $ npm run develop

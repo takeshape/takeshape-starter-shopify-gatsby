@@ -15,12 +15,6 @@ export const query = graphql`
   fragment product on TS_Product {
     _id
     name
-    image {
-      ...image
-      fluid(maxWidth: 400, maxHeight: 400) {
-        ...GatsbyTakeShapeImageFluid
-      }
-    }
     shopifyProductId: takeshapeIoShopId
     shopifyProduct: takeshapeIoShop {
       title
@@ -31,6 +25,13 @@ export const query = graphql`
           }
         }
       }
+      images(first: 1) {
+          edges {
+              node {
+                  transformedSrc(crop: CENTER, maxHeight: 400, maxWidth: 400)
+              }
+          }
+      }
     }
   }
 
@@ -40,7 +41,7 @@ export const query = graphql`
         items {
           _id
           name
-          text
+          text: textHtml
           photo {
             ...image
             fluid(maxWidth: 900, maxHeight: 1200) {
@@ -68,9 +69,9 @@ const Product = ({ _id, name, image, shopifyProductId, shopifyProduct }) => {
   const price = getProductPrice(shopifyProduct);
   return (
     <div className={styles.product}>
-      {image && (
+      {shopifyProduct.images && (
         <Link className={styles.productImage} to={routes.products(name)}>
-          <Img fluid={image.fluid} />
+          <Img fluid={shopifyProduct.images?.edges[0]?.node} />
         </Link>
       )}
       <div className={styles.productLabel}>
@@ -88,7 +89,7 @@ const Look = ({ photo, text, products }) => {
         <Img fluid={photo.fluid} />
       </div>
       <div className={styles.details}>
-        <p className={styles.text}>{text}</p>
+        <p className={styles.text} dangerouslySetInnerHTML={{__html: text}}></p>
         <div>
           {products.map((product) => (
             <Product {...product} key={product._id} />

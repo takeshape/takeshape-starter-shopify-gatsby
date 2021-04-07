@@ -33,21 +33,19 @@ const Banner = () => {
           <p>Interested in building something like this?</p>
           <ol>
             <li>
-              <a href='https://github.com/takeshape/takeshape-starter-shopify-gatsby'>Explore the repository in GitHub</a>
+              <a href='https://github.com/takeshape/takeshape-starter-shopify-gatsby'>
+                Explore the repository in GitHub
+              </a>
             </li>
             <li>
               Deploy this project to{" "}
               <a href='https://app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/takeshape-starter-shopify-gatsby/tree/trunk/.takeshape/pattern'>
                 TakeShape
-              </a>{" "}
-              and to{" "}
-              <a href='https://app.netlify.com/start/deploy?repository=https://github.com/takeshape/takeshape-starter-shopify-gatsby'>
-                Netlify
               </a>
             </li>
             <li>
               <a href='https://www.takeshape.io/articles/building-a-rich-e-commerce-experience-on-the-jamstack-with-takeshape-shopify-and-gatsby-js/'>Follow our walkthrough article to build this
-              yourself</a>
+                yourself</a>
             </li>
           </ol>
         </div>

@@ -10,9 +10,9 @@ const Product = ({ image, product, productId }) => {
   const price = getProductPrice(product);
   return (
     <div className={styles.container}>
-      {image && (
+      {product.images && (
         <div className={styles.image}>
-          <Img fluid={image.fluid} />
+          <Img fluid={product.images?.edges[0]?.node} />
         </div>
       )}
       <div className={styles.text}>
@@ -40,14 +40,6 @@ export const query = graphql`
   query($productId: ID!) {
     takeshape {
       product: getProduct(_id: $productId) {
-        image {
-          path
-          title
-          description
-          fluid(maxWidth: 800, maxHeight: 1200) {
-            ...GatsbyTakeShapeImageFluid
-          }
-        }
         productId: takeshapeIoShopId
         product: takeshapeIoShop {
           title
@@ -58,6 +50,13 @@ export const query = graphql`
                 price
               }
             }
+          }
+          images(first: 1) {
+              edges {
+                  node {
+                      transformedSrc(crop: CENTER, maxHeight: 400, maxWidth: 400)
+                  }
+              }
           }
         }
       }
