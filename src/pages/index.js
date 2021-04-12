@@ -2,7 +2,7 @@ import React from "react"
 import {Link, graphql} from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/Layout'
-import styles from '../styles/index.module.css'
+import * as styles from '../styles/index.module.css'
 import routes from '../routes'
 
 export const query = graphql`

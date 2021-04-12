@@ -2,7 +2,8 @@ import React from 'react'
 import {graphql} from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from './Layout'
-import styles from '../styles/product.module.css'
+import * as styles from '../styles/product.module.css'
+
 import {getProductPrice} from '../pages/index'
 
 const Product = ({ image, product, productId }) => {
