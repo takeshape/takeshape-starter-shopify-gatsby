@@ -71,7 +71,7 @@ const Product = ({ _id, name, image, shopifyProductId, shopifyProduct }) => {
     <div className={styles.product}>
       {shopifyProduct.images && (
         <Link className={styles.productImage} to={routes.products(name)}>
-          <Img fluid={shopifyProduct.images?.edges[0]?.node} />
+          <img src={shopifyProduct.images?.edges[0]?.node.transformedSrc} />
         </Link>
       )}
       <div className={styles.productLabel}>
