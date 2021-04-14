@@ -12,7 +12,7 @@ const Product = ({ image, product, productId }) => {
     <div className={styles.container}>
       {product.images && (
         <div className={styles.image}>
-          <Img fluid={product.images?.edges[0]?.node} />
+          <img src={product.images?.edges[0]?.node.transformedSrc} />
         </div>
       )}
       <div className={styles.text}>
