@@ -67,11 +67,14 @@
 
 .productImage {
   flex: 0 0 auto;
+  margin: 1em;
+}
+
+.productImage img {
+  display: block;
   width: 100%;
   max-width: 4em;
-  display: block;
   height: auto;
-  margin: 1em;
   border-radius: 4px;
 }
 
