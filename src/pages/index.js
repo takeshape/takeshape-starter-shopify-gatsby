@@ -89,7 +89,7 @@ const Look = ({ photo, text, products }) => {
         <Img fluid={photo.fluid} />
       </div>
       <div className={styles.details}>
-        <p className={styles.text} dangerouslySetInnerHTML={{__html: text}}></p>
+        <div className={styles.text} dangerouslySetInnerHTML={{__html: text}}></div>
         <div>
           {products.map((product) => (
             <Product {...product} key={product._id} />
