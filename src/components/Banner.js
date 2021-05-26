@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from './TakeShape.png'
-import styles from "../styles/banner.module.css";
+import * as styles from "../styles/banner.module.css";
 
 const Banner = () => {
   const [visible, setVisible] = useState(true);

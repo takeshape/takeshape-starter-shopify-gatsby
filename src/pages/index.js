@@ -2,7 +2,7 @@ import React from "react"
 import {Link, graphql} from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/Layout'
-import styles from '../styles/index.module.css'
+import * as styles from '../styles/index.module.css'
 import routes from '../routes'
 
 export const query = graphql`
@@ -89,7 +89,7 @@ const Look = ({ photo, text, products }) => {
         <Img fluid={photo.fluid} />
       </div>
       <div className={styles.details}>
-        <p className={styles.text} dangerouslySetInnerHTML={{__html: text}}></p>
+        <div className={styles.text} dangerouslySetInnerHTML={{__html: text}}></div>
         <div>
           {products.map((product) => (
             <Product {...product} key={product._id} />

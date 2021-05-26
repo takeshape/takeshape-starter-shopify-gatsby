@@ -1,8 +1,8 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import Img from 'gatsby-image'
 import Layout from './Layout'
-import styles from '../styles/product.module.css'
+import * as styles from '../styles/product.module.css'
+
 import {getProductPrice} from '../pages/index'
 
 const Product = ({ image, product, productId }) => {
@@ -12,7 +12,7 @@ const Product = ({ image, product, productId }) => {
     <div className={styles.container}>
       {product.images && (
         <div className={styles.image}>
-          <img src={product.images?.edges[0]?.node.transformedSrc} />
+          <img src={product.images?.edges[0]?.node.originalSrc} />
         </div>
       )}
       <div className={styles.text}>
@@ -54,7 +54,7 @@ export const query = graphql`
           images(first: 1) {
               edges {
                   node {
-                      transformedSrc(crop: CENTER, maxHeight: 400, maxWidth: 400)
+                      originalSrc
                   }
               }
           }
