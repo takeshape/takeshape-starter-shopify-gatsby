@@ -12,7 +12,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "setup": "open https://app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/takeshape-starter-shopify-gatsby/tree/trunk/.takeshape/pattern"
+    "setup": "open https://app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/patterns/tree/main/shopify-lookbook"
   },
   "dependencies": {
     "gatsby": "^2.25.3",
